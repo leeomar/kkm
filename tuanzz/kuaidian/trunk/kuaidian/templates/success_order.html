@@ -1,0 +1,45 @@
+﻿{% extends "base.html" %}
+{% block title %}可可门 - 我的订单 {% endblock %}
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/user_center.css" />
+<script src="/static/js/mootools.js"></script>
+<script src="/static/js/modify.js"></script>
+{% endblock %}
+{% block mainbody %}
+	<div class="buy_info user_info">
+		<h1><span>我们会在当时11：30至12：30准时送达！</span></h1>
+		
+		<ul class="user">
+            {% if userName %}
+			<li>欢迎您：<span>{{userName}}</span> <a href="/user/logout/">[退出]</a></li>
+            <li><a href="/user/list_order/">我的订单</a></li>
+            <li><a href="/">返回首页</a></li>
+            {% else %}
+            <li><a href="/user/login/">登陆</a></li>
+            <li><a href="/user/register">注册</a></li>
+            {% endif %}
+		</ul>
+	</div><!--buy_info end-->
+
+    {%if totalPrice %}
+	<div class="success_box">
+		<h2>订单提交成功！</h2>
+		<ul>
+			<li>支付方式：货到付款  &nbsp;&nbsp;应付款：<span>{{totalPrice}}</span>元</li>
+			<li>我们会在当时11：30至12：30准时送达！</li>
+			<li>如需要取消当日订单，请致电：4000-1234-55</li>
+		</ul>
+		<p>
+			<a href="/user/list_order/">查看我的订单</a>
+			<a href="/">返回首页</a>
+		</p>
+	</div>
+    {%else%}
+    <div class="success_box">
+        <h2><{{error}}/h2>
+    </div>
+    {%endif%}
+
+	
+{% endblock %}

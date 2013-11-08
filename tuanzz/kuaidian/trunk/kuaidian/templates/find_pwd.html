@@ -1,0 +1,43 @@
+﻿{% extends "base.html" %}
+{% block import %}
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/login_regst.css" />
+{% endblock %}
+
+{% block mainbody %}
+    <div class="main">
+	
+		<div class="content_l">
+			<h1>找回密码</h1>
+			<div class="login_register">
+				<p>
+					<label for="email">email：</label>
+					<input type="text" id="email" name="user_name" class="input_text" /> <span>输入您注册时的邮箱</span>
+				</p>
+				<p style="clear:both;"><input type="button" value="提交" class="input_btn btn_login" /></p>
+			</div>
+		
+		</div><!--content_l end-->
+		
+		<div class="content_r">
+		
+			<div class="content_box">
+				<h3>已有可可门账户?</h3>
+				<div class="box_c">
+					<p>立即<a href="#">登录</a>，只需30秒！</p>
+				</div>
+			</div>
+			
+			<div class="content_box">
+				<h3>注册有哪些好处？</h3>
+				<div class="box_c">
+					<p>无论是否注册，你都可以把常吃的餐厅定制到首页，但是注册以后你辛辛苦苦的定制就不会随cookie一起容易丢失。</p>
+				</div>
+			</div>
+
+		
+		</div><!--content_r end-->
+		
+		
+	</div><!--main end-->
+{% endblock %}

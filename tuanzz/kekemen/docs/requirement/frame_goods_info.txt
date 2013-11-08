@@ -1,0 +1,4 @@
+URL: HOST/good/(goodid)/
+  Request:
+    DICT: good            good.id good.name good.price good.pic[0] good.pic[1]
+

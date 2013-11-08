@@ -1,0 +1,107 @@
+{% extends "page_base.html" %}
+{% block title %} 可可门 - 搜索 {% endblock %}
+{% block import_head %}
+<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/search.css" />
+{% endblock %}
+{% block container %}
+<div id="container" class="clearfix">
+  <div class="content">
+	<div class="search">
+      <form method="get">
+		<select id="city" name="city">
+		  <option selected="select" value="1">请选择城市</option>
+      	  <option value="1">武汉</option>
+		</select>
+		<div class="input_border">
+		  <input type="text" name="keyword" class="input_text" value="{{ keyword }}">
+		</div>
+		<input type="submit" class="input_btn" value="搜索">
+	  </form>
+	  <p class="keys">
+		<span>搜索</span>&gt;
+		<a href="#">水煮鱼</a>&gt;
+		<a href="#">水煮鱼</a>
+	  </p>
+	</div>
+	<div class="cate_tab clearfix">
+	  <div class="cate">
+		<a href="#">美食</a> | 
+		<a href="#">餐厅</a>
+	  </div>
+	  <ul class="tab">
+		<li class="cur"><a href="#">热门</a></li>
+		<li><a href="#">最新</a></li>
+		<li><a href="#">关注</a></li>
+	  </ul>
+	</div>
+	<ul class="search_list">
+      {% for shop in data %}
+	  <li class="item_box">
+		<img class="pic" alt="" src="{{ shop.pic.middle }}" />
+		<a href="/shop/{{ shop.id }}" class="input_btn">进店</a>
+		<h3><a href="/shop/{{ shop.id }}" title="">{{ shop.name }}</a></h3>
+		<p class="adr">地址：{{ shop.address }}</p>
+		<p>商家介绍：{{ shop.compartment }}</p>
+		<div class="btm_link">
+		  <span class="fr">
+			<span>评论({{ shop.statistic.comment }})</span>
+			<span>吃过({{ shop.statistic.eat }})</span>
+			<span>想吃({{ shop.statistic.want }})</span>
+			<span>喜欢({{ shop.statistic.like }})</span>
+		  </span>
+		</div>
+	  </li>
+      {% endfor %}
+	</ul>
+	<div class="pagelist">
+	  <a href="{{ page_url }}">第一页</a>
+	  <span>1</span>
+	  <a href="{{ page_url }}">2</a>
+	  <a href="{{ page_url }}">3</a>
+	  <a href="{{ page_url }}">最后一页</a>
+	</div>
+  </div><!-- content -->
+  <div class="sider">
+	<div class="side_box tags">
+	  <h3>美食</h3>
+	  <ul class="clearfix">
+		<li>
+		  <a {% ifequal category_id -1 %} class="input_btn"{% endifequal %} href="?{{ category_url }}&category=-1">全部</a>(234)
+		</li>
+        {% for category in categorys %}
+		<li>
+		  <a {% ifequal category.categoryID category_id %} class="input_btn"{% endifequal %} href="?{{ category_url }}&category={{ category.categoryID }}">{{ category.name }}</a>(234)
+		</li>
+        {% endfor %}
+	  </ul>
+	</div><!-- side_box end -->
+	<div class="side_box tags">
+	  <h3>按行政区</h3>
+	  <ul class="clearfix">
+		<li>
+		  <a {% ifequal region_id -1 %} class="input_btn"{% endifequal %} href="?{{ region_url }}&region=-1">全部</a>
+		</li>
+        {% for region in businessDistricts %}
+		<li>
+		  <a {% ifequal region.regionID region_id %} class="input_btn"{% endifequal %} href="?{{ region_url }}&region={{ region.regionID }}">{{ region.name }}</a>(234)
+		</li>
+        {% endfor %}
+	  </ul>
+	</div><!-- side_box end -->
+	<div class="side_box tags">
+	  <h3>按商圈</h3>
+	  <ul class="clearfix">
+		<li>
+		  <a {% ifequal region_id -1 %} class="input_btn"{% endifequal %} href="?{{ region_url }}&region=-1">全部</a>
+		</li>
+        {% for region in administritiveRegions %}
+		<li>
+		  <a {% ifequal region.regionID region_id %} class="input_btn"{% endifequal %} href="?{{ region_url }}&region={{ region.regionID }}">{{ region.name }}</a>(234)
+		</li>
+        {% endfor %}
+	  </ul>
+	</div><!-- side_box end -->
+  </div><!-- side -->
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+﻿/*login style*/
+.login_register {
+	margin:20px 0 0 40px;
+}
+
+.login_register p {
+	padding:10px 0;
+}
+
+.login_register p label {
+	float:left;
+	width:80px;
+	text-align:right;
+	font-size:14px;
+	margin-top:6px;
+}
+
+.login_register p select {
+	font-size:14px;
+	font-family:"Microsoft Yahei",Tahoma,verdana,Arial,Helvetica,STHeiti;
+	margin-right:8px;
+}
+
+.login_register p label.autologin_label {
+	height:20px;
+	line-height:20px;
+	text-align:left;
+	padding-left:4px;
+	margin-top:-3px;
+	font-size:12px;
+}
+
+.login_register p span {
+	color:#666666;
+}
+
+.login_register p .autologin {
+	float:left;
+	margin-left:80px;
+}
+
+.login_register p .input_text, .register input {
+	width:280px;
+	height:24px;
+	line-height:24px;
+	border:1px solid #999999;
+}
+
+.login_register p .btn_login {
+	margin-left:80px;
+	width:58px;
+	border:none;
+}
+
+.login_register p.error {
+	height:20px;
+	line-height:20px;
+	background-color:#FF5050;
+	color:#ffffff;
+	padding:6px 0 6px 15px;
+}
+
+.login_register ul.errorlist li {
+	padding-left:80px;
+	color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+

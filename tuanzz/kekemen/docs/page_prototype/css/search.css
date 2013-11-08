@@ -1,0 +1,121 @@
+﻿/*search content style*/
+#content .main .search_frame {
+	height:40px;
+	padding:15px 25px;
+	background-color:#FFE6FF;
+	border-radius:10px;
+}
+
+#content .main .search_frame .search_shop {
+	width:400px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	padding-left:5px;
+	color:#333333;
+	border-radius:8px;
+}
+
+#content .main .search_frame .search_btn {
+	width:80px;
+	height:30px;
+	line-height:30px;
+	border:none;
+	color:#ffffff;
+	font-size:16px;
+	font-family:Microsoft Yahei;
+	margin-left:8px;
+	border-radius:5px;
+	background-color:#FF3399;
+}
+
+#content .main .search_frame p span a{
+	margin-left:10px;
+	color:#FF3300;
+	font-size:14px;
+}
+
+#content .main .search_content {
+	height:200px;
+	padding-top:5px;
+	_padding-top:10px;
+	margin-top:20px;
+	background-color:#ffffff;
+	border-radius:10px;
+}
+
+#content .main .search_content ul {
+	clear:both;
+	padding:15px 20px;
+	_padding:8px 20px;
+}
+
+#content .main .search_content ul li {
+	float:left;
+	background-color:#FFDDFF;
+	padding:6px 10px;
+}
+
+#content .main .shop_list {
+	background-color:#ffffff;
+	border-radius:10px;
+	_height:190px;
+	overflow:hidden;
+	margin-top:20px;
+	padding:10px 15px;
+}
+
+#content .main .shop_list .shop_info {
+	float:left;
+	width:460px;
+}
+
+#content .main .shop_list .shop_info img {
+	float:left;
+	width:180px;
+	border-radius:5px;
+}
+
+#content .main .shop_list .shop_info .shop_detail {
+	float:left;
+	margin-left:15px;
+	width:260px;
+}
+
+#content .main .shop_list .shop_info .shop_detail h3 {
+	font-size:16px;
+}
+
+#content .main .shop_list .shop_info .shop_detail p {
+	line-height:20px;
+	padding:3px;
+	font-size:12px;
+}
+
+#content .main .shop_list .shop_follow {
+	float:left;
+	margin-left:10px;
+	font-size:14px;
+	padding-top:40px;
+}
+
+#content .main .shop_list .shop_follow p {
+	padding:4px;
+}
+
+#content .main .shop_list .shop_follow p span {
+	color:#FF3399;
+	font-weight:bold;
+	font-size:16px;
+}
+
+#content .main .shop_list .shop_follow ul {
+	padding-top:38px;
+	_padding-top:30px;
+}
+
+#content .main .shop_list .shop_follow ul li {
+	float:left;
+	padding:0 6px;
+	_padding:0 4px;
+}

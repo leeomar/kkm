@@ -1,0 +1,81 @@
+﻿/*index content style*/
+#content .content_div {
+}
+
+#content .content_div .avatar {
+	float:left;
+}
+
+#content .content_div .avatar img {
+	width:64px;
+	height:64px;
+	border-radius:5px;
+}
+
+#content .content_div .con_r {
+	float:left;
+	width:540px;
+	margin-left:20px;
+	_margin-bottom:0px;
+}
+
+#content .content_div .con_r .panel_nav {
+	background-color:#ffffff;
+	border-radius:10px;
+}
+
+#content .content_div .con_r .panel_nav ul {
+	padding:8px 0px;
+	height:80px;
+}
+
+#content .content_div .con_r .panel_nav ul li {
+	float:left;
+	padding:5px 32px;
+	border-right:1px #999999 dashed;
+}
+
+#content .content_div .con_r .panel_nav ul li p {
+	text-align:center;
+	padding-top:3px;
+	font-size:16px;
+}
+
+#content .content_div .con_r .panel_nav ul li.last {
+	border-right:none;
+}
+
+#content .content_div .con_r .memu_tab {
+	margin-top:30px;
+}
+
+#content .content_div .con_r .memu_tab ul {
+	border-bottom:1px solid #ffffff;
+	height:30px;
+	line-height:34px;
+	_line-height:30px;
+}
+
+#content .content_div .con_r .memu_tab ul li {
+	float:left;
+}
+
+#content .content_div .con_r .memu_tab ul li a {
+	color:#000000;
+	padding:5px 15px;
+	background-color:#ffffff;
+	border:1px solid #CCCCCC;
+	border-right:none;
+	border-bottom:none;
+}
+
+#content .content_div .con_r .memu_tab ul li a:hover, #content .content_div .con_r .memu_tab ul li.first a {
+	background-color:#99CCFF;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#content .content_div .con_r .memu_tab ul li.last a {
+	border-right:1px solid #CCCCCC;
+}
+/*index content end*/

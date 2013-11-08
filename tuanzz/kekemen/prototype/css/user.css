@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.input_text{ border:1px solid #CCC; box-shadow:1px 1px 3px #B4AAA0; border-radius:3px;}
+
+.cart { padding:10px; margin-bottom:10px; border:1px solid #CCC; width:550px; float:left;}
+.cart legend{ font-size:14px; padding:0 10px;}
+.cart_img{ width:60px; height:45px; float:left; margin-right:10px;}
+.cart table{ width:95%; margin:0 auto 15px; border-collapse:collapse;}
+.cart tr{ line-height:22px;}
+.cart th,
+.cart td{ text-align:center; padding:5px;}
+.cart th{ border-bottom:1px solid #CCC;}
+.cart td{ border-bottom:1px dashed #CCC;}
+.cart .price{ color:#F30; font-size:16px; font-weight:bold; padding:0 5px;}
+.cart .input_btn{ padding:4px;}
+.cart .input_text{ width:98%;}
+.cart .input_text.count{ padding:4px; width:20px; height:16px; line-height:16px; text-align:center;}
+.cart .dec,
+.cart .inc{ border:1px solid #EDE; display:inline-block; width:9px; line-height:9px; text-decoration:none;}
+
+.pagelist{ padding:0 15px; border-radius:none; box-shadow:none; text-align:right;}
+.pagelist a,
+.pagelist span{ font-size:12px;}
+
+#cart .radio_group label{ float:none; font-size:12px;}
+#cart .cart_btn{ font-size:14px;}
+#cart .cart_btn .input_btn{ float:right; margin-left:15px;}
+
+.order_info{ width:310px; padding:15px; float:right;}
+.order_info p{ line-height:25px; margin-bottom:5px; font-size:14px;}
+.order_info p label{ float:left; font-size:14px; color:#666; width:90px;}
+.order_info textarea.input_text{ width:280px; height:120px; overflow-y:auto;}
+.order_info .input_text{ width:200px; padding:2px 4px;}
+.order_info p span{ color:#F30; display:block; margin-left:90px;}
+
+
+form .btn_line{ padding-left:115px;}
+form .btn_line .input_btn{ margin-right:80px;}
+.order_info .input_btn{ padding:4px 15px;}
+
+

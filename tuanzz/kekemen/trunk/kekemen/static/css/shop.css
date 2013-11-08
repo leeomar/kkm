@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+h2{ font-size:18px; margin-bottom:8px;}
+.shop{ float:left; background:#F0EEE4;}
+.shop img{ width:630px; height:300px;}
+.shop_info{ background:#F7F6F1; width:270px; padding:15px; float:right;}
+.shop_info p{ padding:0 5px 5px;}
+.shop_info .map{ width:270px; height:240px;}
+.shop_nav{ clear:both; background:#F7F6F1; border-radius:8px; box-shadow:1px 1px 3px #B4AAA0; clear:both; height:35px; line-height:32px; padding:5px 10px 5px 20px; margin-bottom:20px;}
+.shop_nav li{ float:left; padding:0 5px;}
+.shop_nav li a{ padding:0 10px; display:block; text-decoration:none; font-size:14px;}
+.shop_nav li.cur a,
+.shop_nav li a:hover{ background-color:#268CA0; border-radius:3px; box-shadow:1px 1px 1px #196473; color:#FFFFFF; text-decoration:none; text-shadow:1px 1px 1px #333;}
+.shop_goods{ float:left; padding:15px 0 15px 15px; position:relative;}
+.shop_pic{ width:190px; height:190px; border-radius:5px;}
+.shop_goods p{ line-height:20px; color:#666;}
+.shop_goods span{ font-size:14px; font-weight:bold; color:#F30;}
+.add_cart{ float:right; height:40px;}
+.shop_tips{ position:absolute; left:15px; bottom:0px; width:30px; height:15px; background:#F0EEE4;}
+
+.shop_cart,
+.chat{ background:#F7F6F1;}
+.shop_cart h3,
+.chat h3{ background:#FFFFFF;}
+.cart_box,
+.chat_box{ padding:15px;}
+.scroll_box{ overflow-y:auto; max-height:210px; margin-bottom:10px; clear:both;}
+.scroll_box table{ width:100%; border-collapse:collapse;}
+.scroll_box thead tr{ height:1px;}
+.scroll_box td{ overflow:hidden; height:45px; padding:2px 0; border-bottom:1px dashed #CCC;}
+.scroll_box .cart_img{ width:60px; height:45px;}
+.scroll_box p{ height:22px; line-height:22px; font-size:12px; overflow:hidden;}
+.cart_bottom{ height:40px;}
+.cart_bottom p{ height:20px; line-height:20px;}
+.cart_bottom .fr{ margin-top:5px;}
+.cart_bottom .input_btn{ color:#FFFFFF; padding:4px 12px; line-height:28px; text-decoration:none;}
+.copy_link{ line-height:20px; padding:15px; background-color:#F7F6F1;}
+.copy_link .input_border{ float:left; margin-top:0;}
+.copy_link .input_text{ width:190px;}
+.copy_link .input_btn{ padding:4px 8px; float:right;}
+
+.online_list{ height:30px; margin-bottom:2px;}
+.online_list li{ float:left; width:30px; height:30px;}
+.msg_box{ height:100px; overflow-y:auto; overflow-x:hidden; background:#FFFFFF; border:1px solid #CCCCCC; border-radius:5px; padding:5px;}
+.msg_box li span{ color:#999999;}
+.msg_box li span a{ padding-right:5px;}
+.msg_box li p{ padding:0 5px; color:#666666;}
+.text_box{ float:none;}
+.chat_box .input_text{ width:220px;}
+.submit_msg{ float:right; color:#999999; background:#FFFFFF; border:none; font-size:12px; height:28px; padding-right:5px;}
+
+.comments{ background:#F0EEE4; padding-top:10px;}
+.comments ul{ padding:0; border:0 none;}
+
+.notify{ position:fixed; top:200px; left:45%; background-color:#000; color:#FFF; height:30px; line-height:30px; padding:0 15px; border-radius:15px; opacity:0.8; font-size:14px; z-index:1;}

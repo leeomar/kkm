@@ -1,0 +1,26 @@
+{% if userName %}
+<div class="modify_info my_count" id="modify_info" {% if phone %} style="display:none" {% else %} style="display:block" {% endif %}>
+    <h4>修改信息</h4>
+    <div class="count_li">
+        <p>
+            <label for="m_mobile">手机号：</label>
+            <input type="text" class="input_text" id="m_mobile" />
+        </p>
+        <p>
+            <label for="m_address">地址：</label>
+            <input type="text" class="input_text" id="m_address" />
+        </p>
+        <p>
+            <input type="submit" class="input_btn modify_btn" value="保存" />
+        </p>
+    </div>
+</div>
+
+<div class="my_count" id="account_info" {% if phone %} style="display:block"{% else %} style="display:none"{% endif %}>
+    <h4><span class="r"><a href="javascript:void(0)">修改信息</a></span>配送地址</h4>
+    <div class="count_li">
+        <p>手机号：<span id="mobile_phone"> {{ phone }} </span></p>
+        <p>地址：<span id="address"> {{ address }} </span></p>
+    </div>
+</div>
+{% endif %}

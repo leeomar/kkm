@@ -1,0 +1,81 @@
+﻿{% extends "base.html" %}
+{% block title %}可可门 - 我的订单 {% endblock %}
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/user_center.css" />
+<script src="/static/js/mootools.js"></script>
+<script src="/static/js/modify.js"></script>
+{% endblock %}
+{% block mainbody %}
+	<div class="buy_info user_info">
+		<h2>订餐成功后，我们会在每日11：30至12：00准时送达！</h2>
+		
+		<ul class="user">
+            {% if userName %}
+			<li>欢迎您：<span>{{userName}}</span> <a href="/user/logout/">[退出]</a></li>
+            <li><a href="/user/list_order/">我的订单</a></li>
+            <li><a href="/">返回首页</a></li>
+            {% else %}
+            <li><a href="/user/login/">登陆</a></li>
+            <li><a href="/user/register">注册</a></li>
+            {% endif %}
+		</ul>
+	</div><!--buy_info end-->
+
+    <div class="main">
+		<div class="content_l">
+			<h1>我的订单</h1>
+			
+			<div class="order_list">
+				<table cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<th>下单日期</th>
+							<th>菜名</th>
+							<th>数量</th>
+							<th>价格</th>
+							<th>小计</th>
+							<th>消费时间</th>
+							<!-- <th>操作</th> -->
+						</tr>					
+					</thead>
+					<tbody>
+                        {% for orders in order_list %}
+                            {% for order in orders.1 %}
+						    <tr>
+                                {% if forloop.first %}
+							        <td rowspan="{{forloop.revcounter}}" style="border-right:1px dashed #CCCCCC;">{{ orders.0.createTime|date:'Y-m-d' }}</td>
+                                {% endif %}
+							    <td>{{ order.merchandiseID.name }}</td>
+							    <td>{{ order.ammount }}</td>
+							    <td>{{ order.price }}</td>
+							    <td>{{ order.total }}</td>
+							    <td>{{ orders.0.expectTime|date:'Y-m-d' }}</td>
+							    <!-- <td><a href="#">取消</a></td> -->
+						    </tr>
+                            {% endfor %}
+                        {% endfor %}
+					</tbody>			
+				</table>
+			</div><!--cart_list end-->
+			
+			<!-- <div class="page"> -->
+			<!-- 	<ul> -->
+			<!-- 		<li><a href="#">&lt;&lt;</a></li> -->
+			<!-- 		<li class="cur"><a href="#">1</a></li> -->
+			<!-- 		<li><a href="#">2</a></li> -->
+			<!-- 		<li><a href="#">3</a></li> -->
+			<!-- 		<li><a href="#">4</a></li> -->
+			<!-- 		<li><a href="#">&gt;&gt;</a></li> -->
+			<!-- 	</ul> -->
+			<!-- </div><\!--page end-\-> -->
+		
+		</div><!--content_l end-->
+		
+		<div class="content_r">
+		    {% include "user_info.html" %}
+		</div><!--content_r end-->
+		
+		
+	</div><!--main end-->
+{% endblock %}

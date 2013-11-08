@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>{% block title %}{% endblock %}</title>
+<meta name="keywords" content="可可门 订餐 写字楼订餐" />
+<meta name="description" content="可可门 武汉首家写字楼订餐网站" />
+<meta name="author" content="kekemen" />
+<meta name="copyright" content="kekemen inc." />
+{% block import %} {% endblock %}
+</head>
+
+<body>
+	<div class="top"></div>
+    <div id="container">
+		<div id="header">
+			<div class="logo">
+				<a href="/"><img src="/static/images/logo.png" title="可可门" alt="可可门" /></a>
+			</div>	
+			<p class="cs_tel">客服电话：<span>4000-1234-55</span></p>
+		</div><!--header end-->        
+        
+        <div id="content">
+            {% block mainbody %} {% endblock %}
+        </div><!--content end-->
+        <div class="clr"></div>
+        <div id="footer">
+	        <p>
+	        	© 2011 版权所有 可可门   鄂ICP备10017435号
+	        	<script src=" http://s22.cnzz.com/stat.php?id=3105542&web_id=3105542" language="JavaScript"></script>
+	        </p>
+        </div><!--footer end-->
+    </div><!--container end-->
+    <div class="bottom"></div>
+</body>
+</html>

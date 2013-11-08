@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>可可门 - 首页</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+
+<script type="text/javascript">
+	window.onscroll = function() {
+		var ug = navigator.userAgent.toLowerCase();
+		var chrome = ug.match(/chrome\/\d\.\d/gi);
+		var reg = /chrome/;
+		var isChrome = reg.test(ug);
+		
+		var cate_top=document.getElementById("header");
+		if(isChrome) {
+			var height=document.body;
+		} else {
+			var height=document.documentElement;
+		}
+		if (height.scrollTop) {
+			cate_top.style.position="fixed";
+		} else {
+			cate_top.style.position="relative";
+		}
+	}
+	
+	function showCate() {
+		var key = document.getElementById("key");
+		var search_cate = document.getElementById("search_cate");
+		key.onblur = function() {
+			search_cate.style.display="none"; 
+		}
+		key.onfocus = function() {
+			search_cate.style.display="block";
+		}
+	}
+	
+	window.onload = function() {
+		showCate();
+	}
+
+</script>
+</head>
+
+<body>
+<div id="header">
+	<div class="header_fixed">
+		<div class="logo">
+			<h1>可可门</h1>
+		</div>
+		
+		<div class="change_city">
+			<p class="cur_city">武汉<span><a href="#">切换城市</a></span></p>	
+			<p>kekemen.com</p>
+		</div>
+		
+		<div class="memu">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">个人主页</a></li>
+				<li><a href="#">江城饭堂</a></li>
+			</ul>
+		</div>
+
+		<div class="search">
+			<input type="text" name="key" id="key" class="key" placeholder="请输入" />
+			<input type="submit" name="btn_submit" class="btn_submit" value="搜索" />
+			<div class="search_cate" id="search_cate">
+				<ul class="cate_t">
+					<li class="cate_m">
+						<h3>区域</h3>
+						<ul>
+							<li><a class="tab" href="#">江岸区</a></li>
+							<li><a class="tab" href="#">江汉区</a></li>
+							<li><a class="tab" href="#">硚口区</a></li>
+							<li><a class="tab" href="#">汉阳区</a></li>
+							<li><a class="tab" href="#">武昌区</a></li>
+							<li><a class="tab" href="#">硚口区</a></li>
+							<li><a class="tab" href="#">青山区</a></li>
+							<li><a class="tab" href="#">洪山区</a></li>
+							<li><a class="tab" href="#">东西湖区</a></li>
+						</ul>					
+					</li>
+					
+					<li class="cate_m">
+						<h3>商圈</h3>
+						<ul style="float:left;">
+							<li><a href="#">江岸区</a></li>
+							<li><a href="#">江汉区</a></li>
+							<li><a href="#">硚口区</a></li>
+							<li><a href="#">汉阳区</a></li>
+							<li><a href="#">武昌区</a></li>
+							<li><a href="#">硚口区</a></li>
+							<li><a href="#">青山区</a></li>
+							<li><a href="#">洪山区</a></li>
+							<li><a href="#">东西湖区</a></li>
+						</ul>					
+					</li>
+
+
+					<li class="cate_m">
+						<h3>菜系</h3>
+						<ul>
+							<li><a href="#">鄂菜</a></li>
+							<li><a href="#">川菜</a></li>
+							<li><a href="#">粤菜</a></li>
+							<li><a href="#">湘菜</a></li>
+							<li><a href="#">火锅</a></li>
+							<li><a href="#">海鲜</a></li>
+							<li><a href="#">烧烤</a></li>
+							<li><a href="#">日本料理</a></li>
+							<li><a href="#">自助餐</a></li>
+							<li><a href="#">小吃</a></li>
+						</ul>
+					</li>
+
+					<li class="cate_m">
+						<h3>价格</h3>
+						<ul>
+							<li><a href="#">0-50</a></li>
+							<li><a href="#">50-100</a></li>
+							<li><a href="#">100-150</a></li>
+							<li><a href="#">150-200</a></li>
+							<li><a href="#">200-250</a></li>
+							<li><a href="#">250-300</a></li>
+							<li><a href="#">300-350</a></li>
+							<li><a href="#">350-400</a></li>
+							<li><a href="#">400-450</a></li>
+							<li><a href="#">450-500</a></li>
+						</ul>
+					</li>
+
+					<li class="cate_m last">
+						<h3>目的</h3>
+						<ul>
+							<li><a href="#">商务请宴</a></li>
+							<li><a href="#">朋友聚餐</a></li>
+							<li><a href="#">生日派对</a></li>
+							<li><a href="#">情侣预约</a></li>
+							<li><a href="#">婚宴</a></li>
+							<li><a href="#">有包房</a></li>
+							<li><a href="#">有停车声</a></li>
+							<li><a href="#">其它</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</div><!--header end-->
+
+<div id="content">
+	<div class="main">
+		<h2>loviss - 我的关注</h2>		
+		<div class="info">
+			<ul class="follow_list">
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+				<li><a href="#"><img src="images/follow1.jpg" title="" alt="" /></a></li>
+			</ul>
+			<div style="clear:both"></div>
+		</div>
+	</div><!--main end-->
+	
+	<div class="side">
+		<div class="my_avatar">
+			<a href="#"><img src="images/avatar3.jpg" title="" alt="" /></a>
+			<ul>
+				<li>关注<p>300</p></li>
+				<li>喜欢<p>320</p></li>
+				<li>发布<p>60</p></li>
+			</ul>
+			<p class="add_me"><a href="#">添加关注</a></p>
+		</div>
+	</div><!--side end-->
+	
+</div><!--content end-->
+
+<div id="footer">
+	<p>© 2011 版权所有 可可门   鄂ICP备10017435号</p>
+</div><!--footer end-->
+</body>
+
+</html>

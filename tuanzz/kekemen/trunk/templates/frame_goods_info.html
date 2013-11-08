@@ -1,0 +1,116 @@
+﻿{% extends "base.html" %}
+{% block title %}可可门 - {{ good.name }} {% end %}
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/frame.css" />
+{% end %}
+{% block body %}
+<body style="background:none;">
+<div class="frame frame_shop">
+	<div class="frame_l">
+		<div class="tab">
+			<ul>
+				<li class="cur"><a href="#">商品展示</a></li>
+				<li><a href="#">商品详情</a></li>
+				<li><a href="#">购买记录</a></li>
+			</ul>
+		</div>
+		
+		<div class="tab_content">
+			<div class="goods_pic">
+				<img src="/static/images/goods6.jpg" title="" alt="" />
+				<ul>
+					<li><a href="#"><img src="/static/images/goods7.jpg" title="" alt="" /></a></li>
+					<li><a href="#"><img src="/static/images/goods7.jpg" title="" alt="" /></a></li>
+					<li><a href="#"><img src="/static/images/goods7.jpg" title="" alt="" /></a></li>
+					<li class="last"><a href="#"><img src="/static/images/goods7.jpg" title="" alt="" /></a></li>
+				</ul>
+			</div>
+		</div><!--tab_content end-->
+		<div style="clear:both;"></div>
+		
+		<div class="buy_info">
+			<h2>{{ good.name }}</h2>
+			<p>
+				<span class="r">
+					<a href="#">喜欢</a>
+					<a href="#">关注</a>
+					<a href="#">推荐</a>
+				</span>
+				原价：￥<span class="market_p">238</span>  &nbsp; &nbsp; &nbsp;折扣：<span class="rebate">3.8</span>折   &nbsp; &nbsp; &nbsp;现价：￥<span class="promote_p">{{ good.price }}</span>  
+			</p>
+			<p class="btn">
+				<a href="#" class="buy">加入购物车</a>
+				<a href="#" class="collect">加入收藏</a>
+			</p>
+		</div><!--buy_info end-->
+
+	</div><!--frame_l end-->
+	
+	<div class="frame_r">
+		<div class="tab">
+			<ul>
+				<li class="cur"><a href="#">所有评论</a></li>
+				<li><a href="#">好友评论</a></li>
+				<li><a href="#">我的评论</a></li>
+			</ul>
+		</div>
+		
+		<div class="comment">
+			<ul>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+				<li>
+					<a href="#"><img src="/static/images/avatar2.png" title="" alt="" /></a>
+					<p>茶餐厅环境还是不错的，就是里面的食品觉得一般，分量也很少，上菜速度比较慢,4个人4碗面，时间间隔差很久，先上来的都快吃完了，后面都还没端来。</p>
+				</li>
+
+			</ul>
+		</div>
+		
+		<div class="comment_page page">
+			<ul>
+				<li><a href="#"><<</a></li>
+				<li class="cur"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">>></a></li>
+			</ul>
+		</div>
+		
+		<div class="post_comment">
+			<textarea name="post_comment" class="post_comment"></textarea>
+			<input type="submit" value="评论" class="btn_post" />
+		</div>
+
+	</div><!--frame_r end-->
+</div>
+</body>
+{% end %}

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.people_list {
+	clear:both;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.people_list .map{
+	margin-bottom:10px;
+}
+
+.people_list ul li.people_item {
+	background-color:#F7F6F1;
+	border-bottom:1px solid #E1DCC8;
+	border-top:1px solid #ffffff;
+	margin-bottom:20px;
+	border-radius:5px;
+	box-shadow:1px 1px 3px #B4AAA0;
+}
+
+.people_list ul li.people_item .li_box{
+	padding:15px;
+}
+.people_list ul li.people_item .goods img{
+	width:590px;
+	height:300px;
+	margin-bottom:10px;
+}
+
+.people_list ul li.people_item .goods_info{
+    font-size:14px;
+}
+
+.people_list ul li.people_item .goods_info p {
+    padding: 4px 0;
+}
+
+.people_list ul li.people_item .goods_info p.describe {
+    color: #666666;
+    font-style: italic;
+}
+
+.people_list ul li.people_item .goods_info p.name {
+    font-size: 16px;
+}
+
+.li_footer {
+	clear:both;
+	height:30px;
+	line-height:30px;
+	padding:0 15px;
+	background:#F0EEE4;
+}
+
+.li_footer ul li {
+	float:left;
+	border:none;
+	padding:0 12px;
+}

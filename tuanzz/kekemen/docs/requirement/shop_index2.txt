@@ -1,0 +1,15 @@
+URL: HOST/shop/(shopid)/
+   Return:
+     DICT: shop                        shop.id shop.name .....					Shop.objects.get(pk = 1)
+     LIST: [category1, category2]      category1.id category1.name .....		Category.objects.filter(shopID = 1) 
+     LIST: [good1, good2]              good1.id good1.pic good1.name .....		Merchandise.objects.filter(shopID = 1).filter(categoryID = 1)	
+     INT:  page_count
+	 
+	 
+     
+
+AJAX_URL: HOST/ajax/shop/(shopid)/(categoryid)/[(pageid)/]
+  Return:
+    LIST: [good1, good2]               good1.id good1.pic good1.name ....		 Merchandise.objects.get(pk = 1)
+
+     

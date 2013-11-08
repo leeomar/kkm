@@ -1,0 +1,68 @@
+﻿#content .shop_title {
+	padding:15px 15px 0;
+}
+
+/*goods_list style*/
+#content .goods_list ul {
+	padding-left:15px;
+}
+#content .goods_list ul li {
+	float:left;
+	text-align:center;
+	background-color:#ffffff;
+	padding:8px;
+	margin-right:9px;
+	margin-bottom:15px;
+	border-radius:8px;
+	display:inline;
+	white-space:nowrap;
+}
+
+#content .goods_list ul li p {
+	color:#666666;
+	line-height:20px;
+}
+
+#content .goods_list ul li p.goods_name {
+	color:#000000;
+}
+
+#content .goods_list ul li p span.market_p {
+	text-decoration:line-through;
+}
+
+#content .goods_list ul li p span.promote_p, #content .goods_list ul li p span.shop_p{
+	color:#FF3300;
+	font-size:14px;
+}
+
+#content .goods_list ul li p span.shop_p {
+	font-size:12px;
+}
+
+#content .goods_list ul li img {
+	border-radius:5px;
+}
+
+#content .goods_list ul li.shop_info {
+	background-color:#FFCCFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,198 @@
+﻿{% extends "base.html" %}
+{% block title %}可可门 - 首页{% endblock %}
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/index.css"  />
+<script src="/static/js/common.js"></script>
+<script src="/static/js/mootools.js"></script>
+<script src="/static/js/date.js"></script>
+<script src="/static/js/home.js"></script>
+<script src="/static/js/modify.js"></script>
+{% endblock %}
+{% block mainbody %}
+    <div class="buy_info">
+		<h2>{{curLocation}}</h2>
+		<p class="change_place" id="change_place">[ <a href="javascript:void(0);">其它位置</a> ]</p>
+		<p class="buy_num"><span class="buy_count">{{saleroom}}</span>人已成功购买！</p>
+		<div class="choice_place" id="choice_place">
+			<ul>
+				<li>
+					<dl>
+						<dt>商圈</dt>
+                        {% for item in districts.districts %}
+                            {% if forloop.counter == 1 %}
+						    <dd id="one{{forloop.counter}}" onclick="setTab('one', {{forloop.counter}},{{ districts.districtNum }})" class="hover"><a href="javascript:void(0);">{{item}}</a></dd>
+                            {% else %}
+						    <dd id="one{{forloop.counter}}" onclick="setTab('one', {{forloop.counter}},{{ districts.districtNum }})" ><a href="javascript:void(0);">{{item}}</a></dd>
+                            {% endif %}
+                        {% endfor %}
+					</dl>
+				</li>
+                <!-- [[(3L, u'101\u5927\u53a6')], ]  -->
+                {% for mall in districts.buildings %}
+                    {% if forloop.counter == 1 %}
+				     <li id="con_one_{{forloop.counter}}">
+                    {% else %}
+                     <li id="con_one_{{forloop.counter}}" style="display:none">
+                    {% endif %}
+					    <dl>
+						    <dt>写字楼</dt>
+                            {% for building in mall %}
+						    <dd><a href="/product/{{building.0}}/list">{{building.1}}</a></dd>
+                            {% endfor %}
+					    </dl>
+				    </li>
+                {% endfor %}
+
+				<li id="con_one_2" style="display:none">
+					<dl>
+						<dt>写字楼</dt>
+						<dd><a href="#">不限</a></dd>
+						<dd><a href="#">新世界百货</a></dd>
+					</dl>
+				</li>
+				
+			</ul>
+			<div id="close"><a href="javascript:void(0);">关闭</a></div>
+		</div><!--choice_place end-->
+		
+		<ul class="user">
+            {% if userName %}
+			<li>欢迎您：<span>{{userName}}</span> <a href="/user/logout/">[退出]</a></li>
+            <li><a href="/user/list_order/">我的订单</a></li>
+            <li><a href="/">帮助</a></li>
+            {% else %}
+            <li><a href="/user/login/">登陆</a></li>
+            <li><a href="/user/register">注册</a></li>
+            <li><a href="/common/help">帮助</a></li>
+            {% endif %}
+		</ul>
+	</div><!--buy_info end-->
+	
+	<div id="ifocus">
+		<div id="ifocus_pic">
+			<div id="ifocus_piclist">
+				<ul>
+					<li class="current"><a href="/common/help" target="_blank"><img src="/static/images/help.jpg" alt="订餐流程" /></a></li>
+					<li class="normal"><a href="/common/gift" target="_blank"><img src="/static/images/gift.jpg" alt="好礼相送" /></a></li>
+					<li class="normal"><img src="/static/images/ad2.jpg" alt="美食订餐" /></li>
+				</ul>
+			</div>
+			<div id="ifocus_opdiv"></div>
+			<div id="ifocus_tx">
+				<ul>
+					<li class="current"></li>
+					<li class="normal"></li>
+					<li class="normal"></li>
+				</ul>
+				<div id="ifocus_btn">
+					<ul>
+						<li class="current">1</li>
+						<li class="not_show">2</li>
+						<li class="not_show">3</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div><!--ifocus end-->
+			
+	<div class="main">
+	
+		<div class="menu_list">
+			<ul class="date_list" id="date_list">
+			  <li class="today">
+					<h3>今天菜单</h3>
+                    <p class="remain_time" id="today_menu"></p>
+                    {% if todayMenuExpired %}
+					<ul class="cate_list_shadow">
+                    {% else %}
+					<ul class="cate_list">
+                    {% endif %}
+						<li>
+                            {% for menu in menus.0 %}
+							<dl>
+								<dt>{{ menu.name }}</dt>
+                                {% for dish in menu.dishes %}
+								    <dd><span class="r">{{ dish.3 }}元</span><a href="javascript:void(0);" name="{{ dish.0 }}" day_cart="0">{{ dish.1 }}</a><span class="detail">{{ dish.2 }}</span></dd>
+                                {% endfor %}
+							</dl>
+                            {% endfor %}
+						</li>
+					</ul>
+				</li>
+			  <li class="tomorrow">
+					<h3>明天菜单</h3>
+                    <p class="remain_time" id="tomorrow_menu"></p>
+					<ul class="cate_list">
+						<li>
+                            {% for menu in menus.1 %}
+							<dl>
+								<dt>{{ menu.name }}</dt>
+                                {% for dish in menu.dishes %}
+								    <dd><span class="r">{{ dish.3 }}元</span><a href="javascript:void(0);" name="{{ dish.0 }}" day_cart="1">{{ dish.1 }}</a><span class="detail">{{ dish.2 }}</span></dd>
+                                {% endfor %}
+							</dl>
+                            {% endfor %}
+						</li>
+					</ul>
+				</li>
+			  <li class="after_tmr" id="after_tmr">
+					<h3>后天菜单</h3>
+                    <p class="remain_time" id="after_tmr_menu"></p>
+					<ul class="cate_list">
+						<li>
+                            {% for menu in menus.2 %}
+							<dl>
+								<dt>{{ menu.name }}</dt>
+                                {% for dish in menu.dishes %}
+								    <dd><span class="r">{{ dish.3 }}元</span><a href="javascript:void(0);" name="{{ dish.0 }}" day_cart="2">{{ dish.1 }}</a><span class="detail">{{ dish.2 }}</span></dd>
+                                {% endfor %}
+							</dl>
+                            {% endfor %}
+						</li>
+					</ul>
+				</li>
+		</div><!--menu_list end-->
+
+		<div class="cart_list" id="cart_list">
+			<h3>我的购物车</h3>
+			<div class="cart_list_table">
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th>菜名</th>
+							<th>数量</th>
+							<th>单价</th>
+							<th>操作</th>
+						</tr>					
+					</thead>
+					<tbody>
+						<tr class="menu_t">
+							<td colspan="4">今天订单列表</td>
+						</tr>
+						<tr class="menu_t">
+							<td colspan="4">明天订单列表</td>
+						</tr>
+						<tr class="menu_t">
+							<td colspan="4">后天订单列表</td>
+						</tr>
+					</tbody>			
+				</table>
+			</div>
+			<p class="subtotal">总计：<span>0</span>元</p>
+			<input type="button" value="确认购买" class="btn_confirm" />
+            <form id="order_form" action="/order/confirm-order/" method="POST" style="display:none">
+                <input type="text" name="data" value="" />
+                {% csrf_token %}
+            </form>
+			{% include "user_info.html" %}
+			<div class="my_count">
+			    <h4>在线服务</h4>
+			    <div class="count_li">
+			        <p>客服电话：<span class="tel">4000-1234-55</span></p>
+			        <p><span style="margin-top:5px;float:left;">在线答疑：</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=992811332&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:992811332:41" alt="在线答疑" title="在线答疑"></a></p>
+			    </div>
+			</div>
+		</div><!--cart_list end-->
+	</div><!--main end-->
+{% endblock %}

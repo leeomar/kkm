@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.input_text{ border:1px solid #CCC; box-shadow:1px 1px 3px #B4AAA0; border-radius:3px;}
+
+table{ width:95%; margin:0 auto 15px; border-collapse:collapse;}
+tr{ line-height:22px;}
+th,
+td{ text-align:center; padding:5px;}
+th{ border-bottom:1px solid #CCC;}
+td{ border-bottom:1px dashed #CCC;}
+.price{ color:#F30; font-size:16px; font-weight:bold; padding:0 5px;}
+.input_btn{ padding:4px;}
+
+.pagelist{ padding:0 15px; border-radius:none; box-shadow:none; text-align:right;}
+.pagelist a,
+.pagelist span{ font-size:12px;}
+
+
+
+

@@ -1,0 +1,141 @@
+﻿#content .cart {
+	padding:20px;
+}
+
+#content .cart h2{
+	margin-bottom:15px;
+}
+
+#content .cart .cart_main {
+	float:left;
+	width:700px;
+}
+
+#content .cart .cart_main .chat {
+	float:left;
+	width:290px;
+	overflow:hidden;
+}
+
+#content .cart .cart_main .chat .chat_list {
+	background-color:#ffffff;
+	padding:10px 12px;
+	border-radius:8px;
+}
+
+#content .cart .cart_main .chat .chat_list ul li {
+	padding:3px 0;
+}
+
+#content .cart .cart_main .chat .chat_list ul li h3 {
+	font-size:12px;
+}
+
+#content .cart .cart_main .chat .chat_list ul li p {
+	text-indent:12px;
+}
+
+#content .cart .cart_main .chat .textA {
+	width:280px;
+	height:50px;
+	border-radius:8px;
+	margin-top:8px;
+	border:none;
+	padding:3px 5px;
+	line-height:20px;
+}
+
+#content .cart .cart_main .chat .btn_input {
+	margin-top:3px;
+	float:right;
+	width:50px;
+	height:24px;
+	line-height:24px;
+}
+
+#content .cart .cart_main .order_list {
+	float:right;
+	width:400px;
+}
+
+#content .cart .cart_main .order_list {
+	background-color:#ffffff;
+	border-radius:8px;
+}
+
+#content .cart .cart_main .order_list table {
+	width:100%;
+	padding:8px 10px;
+}
+
+#content .cart .cart_main .order_list table th {
+	padding:4px;
+	background-color:#FF3399;
+	color:#ffffff;
+}
+
+#content .cart .cart_main .order_list table tr td {
+	padding:4px 0;
+	background-color:#FFCCFF;
+	text-align:center;
+}
+
+#content .cart .cart_main .order_list table tr.odd td {
+	background-color:#E6E6E6;
+}
+
+#content .cart .cart_main .order_list p {
+	padding:2px 12px 20px;
+	_padding:10px 12px 20px;
+}
+
+#content .cart .cart_main .order_list p span {
+	color:#FF3300;
+	font-size:18px;
+}
+
+#content .cart .cart_main .order_list p .buy{
+	width:60px;
+	margin-left:230px;
+	height:24px;
+	line-height:24px;
+	border:none;
+	background-color:#FF0066;
+	color:#ffffff;
+}
+
+#content .cart .cart_side{
+	float:right;
+	width:150px;
+	background-color:#ffffff;
+	border-radius:8px;
+}
+
+#content .cart .cart_side ul {
+	padding:12px;
+}
+
+#content .cart .cart_side ul li {
+	padding:10px 0 3px;
+	border-bottom:1px #E4E4E4 dashed;
+}
+
+#content .cart .cart_side ul li img {
+	border-radius:3px;
+	margin-right:3px;
+	vertical-align:middle;
+}
+
+#content .cart .cart_side ul li.odd {
+	background-color:#F5F5F5;
+}
+
+
+
+
+
+
+
+
+
+

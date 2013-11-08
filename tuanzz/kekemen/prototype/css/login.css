@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.content{ width:950px;}
+.content .item_box{ width:920px; padding:15px;}
+h3{ color:#96C94B; font-size:18px; padding-bottom:15px;}
+.input_text{ width:200px; border:1px solid #CCC; box-shadow:1px 1px 3px #B4AAA0; border-radius:3px;}
+
+p{ line-height:30px; height:30px; margin-bottom:5px;}
+label{ width:100px; padding-right:15px; float:left; font-size:14px; text-align:right;}
+p span{ padding-left:15px; color:#F30;}
+.btn_line{ padding-left:115px;}
+.btn_line .input_btn{ margin-right:80px;}
+.input_btn{ padding:4px 15px;}
+
+p.upload_avatar{ height:auto;}
+p.upload_avatar img{ width:100px; height:100px; padding:1px; border:1px solid #ccc; display:block; margin-bottom:5px;}
+p.upload_avatar label{ height:120px;}
+
+

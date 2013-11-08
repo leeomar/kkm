@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="item_box">
+	<h3>用户登录</h3>
+	<form action="." method="post">
+		{% csrf_token %}
+        <span class="error"> {{ error }} </span>
+		<p>
+		<label for="email">用户名:</label>
+		<input id="email" name='username' class="input_text" value="" type="text"/>
+		<span class="error">{{ form.username.errors.as_text }}</span>
+		</p>
+		<p>
+		<label for="psw">密码:</label>
+		<input id="psw" name = 'password' class="input_text" type="password"/>
+		<span class="error">{{ form.password.errors.as_text }}</span>
+		</p>
+		<p class="btn_line">
+		<input class="input_btn" value="{% trans 'Log in' %}" type="submit"/>
+		<!-- {% trans "Forgot password" %}? -->
+		<a href="{% url auth_password_reset %}">{% trans "忘记密码" %}</a>
+		<!-- {% trans "Not member" %}? -->
+		/ <a href="{% url registration_register %}">{% trans "注册" %}</a>
+		<input type="hidden" name="next" value="{{ next }}" />
+		</p>
+	</form>
+</div>
+{% endblock %}

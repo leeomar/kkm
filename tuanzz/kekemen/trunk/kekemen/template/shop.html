@@ -1,0 +1,110 @@
+{% extends "page_base.html" %}
+{% block title %} 可可门 - 店铺 {% endblock %}
+{% block import_head %}
+<link media="all" rel="stylesheet" href="/static/css/common.css" type="text/css" />
+<link media="all" rel="stylesheet" href="/static/css/shop.css" type="text/css" />
+<script type="text/javascript" src="/static/js/mootools-core-1.3.1.js"></script>
+<script type="text/javascript" src="/static/js/moohashchange.js"></script>
+{% endblock %}
+{% block import_body %}  
+<script type="text/javascript">
+    ORDER_ID = '{{ objectid }}';
+</script>
+<script type="text/javascript" src="/static/js/comments.js"></script>
+<script type="text/javascript" src="/static/js/shopaction.js"></script>
+<script type="text/javascript" src="/static/js/tabclass.js"></script>
+<script type="text/javascript" src="/static/js/addfollow.js"></script>
+<script type="text/javascript" src="/static/js/shop.js"></script>
+{% endblock %}
+{% block container %}
+<div id="container" class="clearfix">
+  <h2>{{ shop.name }}</h2>
+  <div class="shop item_box">
+    <img class="shop_image" src="{{ static_media_path.large }}{{ shop.pic }}" alt="{{ shop.name }}">
+	  <div class="btm_link">
+		<div class="fl">
+		  <a href="#">特价菜</a>
+		  <a href="#">特色菜</a>
+		  <a href="#">店家详情</a>
+		</div>
+		<div class="fr">
+		  <span>评论({{ shopStatistic.ct }})</span>
+		  <span>吃过({{ shopStatistic.et }})</span>
+		  <span>想吃({{ shopStatistic.wt }})</span>
+		  <span>喜欢({{ shopStatistic.lk }})</span>
+        </div>
+	  </div>
+  </div>
+  <div class="shop_info">
+	<p>地址：{{ shop.address }}</p>
+	<p>电话：{{ shop.phone}}</p>
+	<p>营业时间：{{ shop.openTime|time:'H:i' }} - {{ shop.closeTime|time:'H:i' }}</p>
+	<img class="map" src="/static/images/map.jpg" title="地址" alt="地址"/>
+  </div>	
+  <ul class="shop_nav">
+    {% for menu in menus %}
+      {% if forloop.first %}
+	  <li class="cur"><a href="#!/menu/{{ menu.menuID }}/">{{ menu.name }}</a></li>
+      {% else %}
+	  <li><a href="#!/menu/{{ menu.menuID }}/">{{ menu.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <div class="content">
+    <ul></ul>
+	<div class="pagelist loading "></div>
+	<div class="pagelist"><a href="javascript:;;">&gt;&gt;网络不给力呀,点击重试&lt;&lt;</a></div>
+	<div class="pagelist"><a href="javascript:;;">&gt;&gt;查看更多&lt;&lt;</a></div>
+	<div class="pagelist">没有更多了</div>
+  </div>
+  <div class="sider">
+	<div class="side_box shop_cart">
+	  <h3>我的购物车</h3>
+	  <div class="cart_box">
+		<div class="scroll_box">
+		  <table>
+			<thead>
+			  <tr>
+				<th width="70"></th>
+				<th></td>
+				<th width="70"></th>
+			  </tr>
+			</thead>
+			<tbody> </tbody>
+		  </table>
+		</div>
+		<div class="cart_bottom">
+		  <div class="fl">
+			<p>共计&nbsp;0&nbsp;道菜</p>
+			<p>共需&nbsp;0&nbsp;元</p>
+		  </div>
+          <form action="/confirm/{{ objectid }}">
+		    <div class="fr">
+			  <input class="input_btn" type="submit" value="去结算" />
+		    </div>
+          </form>
+		</div>
+	  </div>
+	</div>
+	<div class="side_box chat">
+	  <h3>在线交流</h3>
+	  <div class="chat_box">
+		<ul class="online_list">
+		  <li><a href="#"><img class="avatar" alt="" src="images/avatar2.jpg"/></a></li>
+		</ul>
+		<ul id="msg_box" class="msg_box"></ul>
+		<form id="online_chat">
+		  <div class="input_border">
+			<input type="submit" class="submit_msg" name="msg_submit" value="发送"/>
+			<input type="text" class="input_text" name="msg_text" value=""/>
+		  </div>
+		</form>
+	  </div>
+	</div>
+	<div class="side_box follow">
+	  <h3>他们来吃过</h3>
+	  <ul> </ul>
+	</div>
+  </div><!-- side -->
+</div>
+{% endblock %}

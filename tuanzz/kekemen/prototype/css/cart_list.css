@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.input_text{ border:1px solid #CCC; box-shadow:1px 1px 3px #B4AAA0; border-radius:3px;}
+
+.cart_img{ width:60px; height:45px; float:left; margin-right:10px;}
+table{ width:95%; margin:0 auto 15px; border-collapse:collapse;}
+tr{ line-height:22px;}
+th,
+td{ text-align:center; padding:5px;}
+th{ border-bottom:1px solid #CCC; font-size:14px; background:#f0eee4;}
+td{ border-bottom:1px dashed #CCC;}
+.price{ color:#F30; font-size:16px; font-weight:bold; padding:0 5px;}
+.input_btn{ padding:4px;}
+.input_text{ width:98%;}
+.input_text.count{ padding:4px; width:20px; height:16px; line-height:16px; text-align:center;}
+.dec,
+.inc{ border:1px solid #EDE; display:inline-block; width:9px; line-height:9px; text-decoration:none;}
+.shop_title{ text-align:left;}
+.shop_title span{ color:#666; font-size:12px;}
+.fr{ margin-left:10px;}
+.pagelist{ padding:0 15px; border-radius:none; box-shadow:none; text-align:right;}
+.pagelist a,
+.pagelist span{ font-size:12px;}
+

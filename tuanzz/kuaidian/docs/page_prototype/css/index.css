@@ -1,0 +1,249 @@
+﻿/*#iFocus style*/
+#ifocus {
+	clear:both;
+	overflow:hidden;
+	margin-top:10px;
+	_margin-top:5px;
+	z-index:0;
+}
+
+#ifocus_pic { 
+	display:inline; 
+	position:relative; 
+	float:left; 
+	width:960px; 
+	height:194px; 
+	overflow:hidden; 
+}
+#ifocus_piclist {
+	position:absolute; 
+}
+#ifocus_piclist li { 
+	width:960px; 
+	height:194px; 
+	float:left;
+	overflow:hidden;
+}
+#ifocus_piclist ul {
+	width:3880px;
+}
+#ifocus_piclist img { 
+	width:960px; 
+	height:194px; 
+	cursor:pointer;
+}
+#ifocus_btn {
+	position:absolute; 
+	left:880px;
+	bottom:12px;
+}
+#ifocus_btn ul {
+	width:100px;
+}
+#ifocus_btn li {
+	cursor:pointer;
+	float:left;
+	margin:0px 2px;
+	padding:0px 4px;
+	height:18px;
+	line-height:16px;
+}
+.not_show {
+	background-color:#8C8C8C;
+}
+#ifocus_btn li.current {
+	background-color:#F26100
+}
+
+#ifocus_tx {
+	position:absolute;
+	left:8px; bottom:6px;
+	color:#FFF; 
+}
+#ifocus_tx .normal {
+	display:none;
+}
+
+/*=== main style ===*/
+/*menu_list style*/
+.menu_list {
+	float:left;
+	width:714px;
+}
+
+.menu_list ul.date_list li {
+	float:left;
+	width:238px;
+}
+
+.menu_list ul.date_list li h3, .cart_list h3 {
+	font-size:18px;
+	color:#ffffff;
+	text-align:center;
+	height:48px;
+	line-height:42px;
+	font-weight:normal;
+}
+
+.menu_list ul.date_list li p {
+	text-align:center;
+	height:28px;
+	line-height:28px;
+}
+
+.menu_list ul.date_list li p span {
+	color:#FF6600;
+	font-size:14px;
+}
+
+.menu_list ul.date_list li ul.cate_list, .cate_list_shadow {
+	min-height:80px;
+	_height:120px;
+	overflow:hidden;
+	_overflow:visible;
+	_width:231px;
+	padding-bottom:20px;
+}
+
+.menu_list ul.date_list li ul.cate_list li dl dt, .cate_list_shadow li dl dt {
+	font-size:14px;
+	padding:8px 0 1px 8px;
+	font-weight:bold;
+}
+
+.menu_list ul.date_list li ul.cate_list li dl dd, .cate_list_shadow li dl dd {
+	padding:5px 0 5px 20px;
+	line-height:20px;
+	color:#3B7FDC;
+}
+
+.menu_list ul.date_list li ul.cate_list li dl dd span.detail, .cate_list_shadow li dl dd span.detail {
+	color:#999999;
+}
+
+
+.menu_list ul.date_list li ul.cate_list li span.r, .cate_list_shadow li span.r{
+	float:right;
+	padding-right:15px;
+	color:#000000;
+}
+
+.cate_list_shadow a {
+	cursor:text;
+	color:#333333!important;
+	display:block;
+}
+
+.cate_list_shadow a:hover {
+	text-decoration:none;
+}
+
+.menu_list ul.date_list li ul.cate_list li a {
+	display:block;
+}
+
+.menu_list ul.date_list li ul.cate_list li a:hover {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.menu_list ul.date_list li ul.cate_list li dl dd.hover, .menu_list ul.date_list li ul.cate_list li dl dd.hover span, .menu_list ul.date_list li ul.cate_list li dl dd.hover a {
+	background-color:#FF6600!important;
+	color:#ffffff!important;
+	cursor:pointer;
+	display:block;
+}
+
+.menu_list ul.date_list li ul.shade li dl dd.hover, .menu_list ul.date_list li ul.shade li dl dd.hover span {
+	cursor:default;
+}
+
+.menu_list ul.date_list li.today {
+	background-color:#F2FFD6;
+}
+
+.menu_list ul.date_list li.tomorrow {
+	background-color:#FFF1F1;
+}
+
+.menu_list ul.date_list li.after_tmr {
+	background-color:#EDF6FF;
+}
+
+
+.menu_list ul.date_list li.today h3 {
+	background-position:left -16px;
+	color:#567317;
+}
+
+.menu_list ul.date_list li.tomorrow h3 {
+	background-position:-238px -16px;
+	color:#970061;
+}
+
+.menu_list ul.date_list li.after_tmr h3 {
+	background-position:-476px -16px;
+	color:#35759B;
+}
+
+.menu_list ul.date_list li.today p {
+	background-color:#D7FA91;
+}
+
+.menu_list ul.date_list li.tomorrow p {
+	background-color:#FFD2F2;
+}
+
+.menu_list ul.date_list li.after_tmr p {
+	background-color:#D3E8FF;
+}
+
+/*cart_list style*/
+.cart_list {
+	float:right;
+	width:246px;
+	background-color:#FFF4EF;
+}
+
+.cart_list h3 {
+	background-position:-714px -16px;
+	color:#8B3F1F;
+}
+
+.cart_list table th {
+	height:28px;
+	line-height:28px;
+	background-color:#FFE6DC
+}
+
+.cart_list table a {
+	color:#E65709;
+}
+
+.cart_list .cart_list_table tr.menu_t td {
+	padding:4px 0;
+	background-color:#FFD7C7;
+}
+
+.cart_list p.subtotal {
+	float:right;
+	margin:8px 0 10px;
+	padding-right:10px;
+}
+
+.cart_list p.subtotal span {
+	color:#FF3300;
+	font-size:20px;
+}
+
+.cart_list .btn_confirm {
+	width:245px;
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	font-size:18px;
+	color:#ffffff;
+	border:none;
+	background-color:#CC0000;
+	cursor:pointer;
+}

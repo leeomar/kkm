@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="item_box">
+	<h3>新用户注册</h3>
+	<form action="/accounts/register/" method="post">
+{% csrf_token %}
+		<p>
+			<label for="account">用户名:</label>
+			<input id="account" name='username' type="text" value="" class="input_text" />
+            <span> {{ form.username.errors.as_text }} </span>
+		</p>
+		<p>
+			<label for="email">E-mail:</label>
+			<input id="email" name='email' type="text" value="" class="input_text" />
+			<span> {{ form.email.errors.as_text }} </span>
+		</p>
+		<p>
+			<label for="psw">密码:</label>
+			<input id="psw" type="password" name='password1' value="" class="input_text" />
+			<span> {{ form.password1.errors.as_text }}</span>
+		</p>
+		<p>
+			<label for="psw-again">重复密码:</label>
+			<input id="psw-again" type="password" name='password2' value="" class="input_text" />
+			<span> {{ form.password2.errors.as_text }} </span>
+		</p>
+		<p>
+			<label for="region">地区:</label>
+{{ form.region }}
+			<span> {{ form.region.errors.as_text }} </span>
+		</p>
+		<p class="btn_line">
+			<input type="submit" class="input_btn" value="{% trans 'Submit' %}" />
+			<input type="reset" class="input_btn" value="{% trans 'Reset' %}" />
+		</p>
+	</form>
+</div>
+{% endblock content %}

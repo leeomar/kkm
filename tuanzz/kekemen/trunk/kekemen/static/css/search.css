@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.search{ background:#F0EEE4; border-radius:8px; box-shadow:1px 1px 3px #B4AAA0; line-height:45px; padding:0 10px 0 20px; margin-bottom:15px;}
+.search select{ float:left; margin:10px 5px 0 0;}
+.search .input_border{ float:left; margin-top:7px; box-shadow:1px 1px 3px #B4AAA0;}
+.search .input_text{ width:400px;}
+.search .input_btn{ margin-left:8px; margin-top:8px; padding:4px 8px;}
+.search .keys{ clear:both; font-size:14px; color:#666;}
+.search .keys span,
+.search .keys a{ padding:0 2px;}
+
+.tags ul li{ color:#999; height:30px; line-height:30px; width:50%; float:left;}
+.tags ul li a{ padding:4px 10px; font-size:14px;}
+
+.search_list .item_box{ padding-top:15px;}
+.search_list .pic{ margin:0 15px 15px 15px; float:left;}
+.search_list h3{ margin-top:10px;}
+.search_list .input_btn{ float:right; padding:4px 12px; margin-right:15px;}
+.search_list p{ line-height:24px; color:#666; padding-right:15px;}
+.search_list p.adr{ color:#999;}
+.food_list{ padding:0 15px 5px 0; background:#F0EEE4;}
+.bd{ width:600px; height:10px; margin-left:15px; border-top:1px dashed #CCC;}
+.food_list ul{ width:615px;}
+.food_list li{ float:left; width:205px;}
+.food_list .pic{ margin:0 0 0 15px;}
+.food_list p{ height:30px; line-height:30px; overflow:hidden; padding:0 5px 0 20px; text-align:right; color:#F30;}
+.food_list p a{ float:left; width:120px; overflow:hidden;}

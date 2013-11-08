@@ -1,0 +1,77 @@
+{% extends "page_base.html" %}
+{% block title %} 可可门 - 首页 {% endblock %}
+{% block import_head %}
+<link media="all" rel="stylesheet" href="/static/css/common.css" type="text/css" />
+<link media="all" rel="stylesheet" href="/static/css/index.css" type="text/css" />
+<script type="text/javascript" src="/static/js/mootools-core-1.3.1.js"></script>
+<script type="text/javascript" src="/static/js/moohashchange.js"></script>
+{% endblock %}
+{% block import_body %}
+<script type="text/javascript" src="/static/js/index.ui.js"></script>
+<script type="text/javascript" src="/static/js/comments.js"></script>
+<script type="text/javascript" src="/static/js/tabclass.js"></script>
+<script type="text/javascript" src="/static/js/addfollow.js"></script>
+<script type="text/javascript" src="/static/js/shopaction.js"></script>
+<script type="text/javascript" src="/static/js/home.js"></script>
+{% endblock %}
+{% block container %}
+<div id="container" class="clearfix">
+  <div class="food_wall">
+	<ul> </ul> <ul> </ul> <ul> </ul>
+  </div><!-- food_wall end -->
+  <div class="search">
+	<ul class="cart_btn">
+	  <li><a href="#">我的购物车</a></li>
+	  <li><a href="#">美食分类</a></li>
+	</ul>
+    <form method="get" action="/search">
+	  <div class="input_border">
+	    <input type="text" class="input_text" name="keyword" value="">
+	  </div>
+	  <input type="submit" class="input_btn" value="搜索">
+    </form>
+  </div>
+  <div class="content">
+	<div class="cate_tab clearfix">
+	  <ul class="tab">
+		<li class="cur"><a href="#!/hot/">热门</a></li>
+		<li><a href="#!/new/">最新</a></li>
+		<li><a href="#!/feed/">关注</a></li>
+	  </ul>
+	</div>
+	<ul id="maincont"></ul>
+	<!-- <div class="loading item_box "></div> -->
+	<div class="pagelist loading "></div>
+	<div class="pagelist"><a href="javascript:;;">&gt;&gt;网络不给力呀,点击重试&lt;&lt;</a></div>
+	<div class="pagelist"><a href="javascript:;;">&gt;&gt;查看更多&lt;&lt;</a></div>
+	<div class="pagelist">没有更多了</div>
+  </div><!-- content -->
+  <div class="sider">
+	<div class="welcome">
+	  <h4>欢迎来到可可门</h4>
+	  <p>分享美食以及本地的优秀的餐饮店铺，让你能更快乐的找到本地美味！</p>
+	</div>
+	<div class="side_login clearfix">
+	  <a class="input_btn fl" href="#">登录</a>
+	  <a class="input_btn fr" href="#">注册</a>
+	</div>
+	<div class="side_box activity">
+	  <h3>特色专区</h3>
+	  <ul>
+		<li><a href="#"><img title="特色专区" alt="特色专区" src="/static/images/ts1.png"></a></li>
+		<li><a href="#"><img title="特色专区" alt="特色专区" src="/static/images/ts2.png"></a></li>
+		<li><a href="#"><img title="特色专区" alt="特色专区" src="/static/images/ts3.png"></a></li>
+	  </ul>
+	</div>
+	<div class="side_box phone_app clearfix">
+	  <h3>手机应用</h3>
+	  <a href="#"><img class="fl" title="android" alt="android" src="/static/images/android.gif"></a>
+	  <a href="#"><img class="fr" title="iphone" alt="iphone" src="/static/images/iphone.gif"></a>
+	</div>
+	<div class="side_box follow">
+	  <h3>美食达人</h3>
+	  <ul> </ul>
+	</div>
+  </div><!-- side -->
+</div>
+{% endblock %}

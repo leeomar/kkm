@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.input_text{ border:1px solid #CCC; box-shadow:1px 1px 3px #B4AAA0; border-radius:3px;}
+
+fieldset{ padding:10px; margin-bottom:10px; border:1px solid #CCC;}
+legend{ font-size:14px; padding:0 10px;}
+.cart_img{ width:60px; height:45px; float:left; margin-right:10px;}
+.cart table{ width:95%; margin:0 auto 15px; border-collapse:collapse;}
+.cart tr{ line-height:22px;}
+.cart th,
+.cart td{ text-align:center; padding:5px;}
+.cart th{ border-bottom:1px solid #CCC;}
+.cart td{ border-bottom:1px dashed #CCC;}
+.cart td p{ margin-bottom:5px;}
+.cart .price{ color:#F30; font-size:16px; font-weight:bold; padding:0 5px;}
+.cart .input_btn{ padding:4px 12px;}
+.cart .input_text{ width:400px; height:120px;}
+.cart .dec,
+.cart .inc{ border:1px solid #EDE; display:inline-block; width:9px; line-height:9px; text-decoration:none;}
+
+.order_info table{ width:95%; margin:0 auto;}
+.order_info tr{ line-height:24px;}
+.order_info th,
+.order_info td{ text-align:left; padding:5px;}
+.order_info th{ width:80px;}
+.order_info .input_btn{ padding:4px;}
+.order_info .input_text{ width:400px; height:150px;}
+
+.comment p{ margin-bottom:5px;}
+.comment .input_text{ width:400px; height:150px;}
+.comment .input_btn{ padding:4px 12px;}
